@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-seif;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background: rgb(22, 206, 214);
+    background: radial-gradient(circle, rgba(22, 206, 214, 1) 0%, rgba(22, 22, 4, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    height: 350px;
+    width: 350px;
+    background: rgb(22, 206, 214);
+    background: radial-gradient(circle, rgba(22, 206, 214, 1) 0%, rgba(22, 22, 4, 1) 70%);
+    border-radius: 50%;
+    border: 10px solid yellow;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg* var(--i)));
+    inset: 20px;
+    text-align: center;
+}
+
+.clock span b {
+    transform: rotate(calc(-30deg* var(--i)));
+    display: inline-block;
+    font-size: 22px;
+}
+
+.clock::before {
+    content: " ";
+    height: 9px;
+    width: 9px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.hand_hr {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand_hr i {
+    position: absolute;
+    width: 6px;
+    height: 60px;
+    border-radius: 9px;
+    background-color: red;
+    background: radial-gradient(circle, red 0%, rgba(22, 22, 4, 1) 100%);
+}
+
+.hand_min {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand_min i {
+    position: absolute;
+    width: 7px;
+    height: 82px;
+    border-radius: 9px;
+    background-color: blue;
+    background: radial-gradient(circle, blue 0%, rgba(22, 22, 4, 1) 100%);
+}
+
+.hand_sec {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand_sec i {
+    position: absolute;
+    width: 3px;
+    height: 95px;
+    border-radius: 9px;
+    background-color: yellow;
+    background: radial-gradient(circle, yellow 0%, rgba(22, 22, 4, 1) 100%);
+}
